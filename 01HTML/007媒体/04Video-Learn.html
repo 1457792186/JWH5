@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-cn" />
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<!--在 HTML 中播放视频的方法有很多种></!-->
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+  <object data="movie.mp4" width="320" height="240">
+    <embed src="movie.swf" width="320" height="240" />
+  </object>
+</video>
+<!--需要谙熟大量技巧,以确保您的视频文件在所有浏览器中（Internet Explorer,Chrome,Firefox,Safari,Opera）和所有硬件上（PC, Mac,iPad,iPhone）都能够播放></!-->
+
+
+
+<!--使用 <embed> 标签></!-->
+<!--<embed> 标签的作用是在 HTML 页面中嵌入多媒体元素></!-->
+<embed src="Supporting/bilibili.MP4" height="200" width="200"/>
+<!--HTML4 无法识别 <embed> 标签。页面无法通过验证。
+如果浏览器不支持 Flash，那么视频将无法播放
+iPad 和 iPhone 不能显示 Flash 视频。
+如果将视频转换为其他格式,那么它仍然不能在所有浏览器中播放
+></!-->
+
+
+
+
+
+<!--使用 <object> 标签></!-->
+<!--<object> 标签的作用是在 HTML 页面中嵌入多媒体元素></!-->
+<object data="Supporting/bilibili.MP4" height="200" width="200"/>
+<!--
+如果浏览器不支持 Flash,将无法播放视频。
+iPad 和 iPhone 不能显示 Flash 视频。
+如果您将视频转换为其他格式,那么它仍然不能在所有浏览器中播放></!-->
+
+
+
+
+
+<!--使用 <video> 标签></!-->
+<!--<video> 是 HTML 5 中的新标签。
+<video> 标签的作用是在 HTML 页面中嵌入视频元素></!-->
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+Your browser does not support the video tag.
+</video>
+<!--必须把视频转换为很多不同的格式。
+<video> 元素在老式浏览器中无效。
+<video> 元素无法通过 HTML 4 和 XHTML 验证></!-->
+
+
+
+
+
+
+<!--最好的 HTML 解决方法></!-->
+<!--HTML 5 + <object> + <embed>></!-->
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+  <object data="movie.mp4" width="320" height="240">
+    <embed src="movie.swf" width="320" height="240" />
+  </object>
+</video>
+<!--使用了 4 中不同的视频格式。HTML 5 <video> 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。如果均失败,则回退到 <embed> 元素></!-->
+<!--必须把视频转换为很多不同的格式
+<video> 元素无法通过 HTML 4 和 XHTML 验证。
+<embed> 元素无法通过 HTML 4 和 XHTML 验证。></!-->
+<!--使用 <!DOCTYPE html> (HTML5) 解决验证问题></!-->
+
+
+
+
+
+<!--优酷解决方案></!-->
+<!--在 HTML 中显示视频的最简单的方法是使用优酷等视频网站></!-->
+<!--如果希望在网页中播放视频，那么可以把视频上传到优酷等视频网站，然后在网页中插入 HTML 代码即可播放视频></!-->
+<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" width="480" height="400" type="application/x-shockwave-flash"> </embed>
+
+
+
+
+<!--使用超链接></!-->
+<!--如果网页包含指向媒体文件的超链接,大多数浏览器会使用“辅助应用程序”来播放文件></!-->
+<!--以下代码片段显示指向 AVI 文件的链接。如果用户点击该链接,浏览器会启动“辅助应用程序”,比如 Windows Media Player 来播放这个 AVI 文件></!-->
+<a href="Supporting/bilibili.MP4">Play a video file</a>
+
+
+
+
+<!--关于内联视频的一段注释></!-->
+<!--当视频被包含在网页中时，它被称为内联视频></!-->
+<!--如果打算在 web 应用程序中使用内联视频,需要意识到很多人都觉得内联视频令人恼火。
+同时请注意,用户可能已经关闭了浏览器中的内联视频选项。
+最好的建议是只在用户希望看到内联视频的地方包含它们。一个正面的例子是,在用户需要看到视频并点击某个链接时,会打开页面然后播放视频></!-->
+
+
+
+
+<!--HTML 4.01 多媒体标签></!-->
+<!--
+标签				描述
+<applet>		不赞成。定义内嵌 applet。
+<embed>			不赞成。定义内嵌对象。（HTML5 中允许）
+<object>		定义内嵌对象。
+<param>			定义对象的参数。></!-->
+
+
+
+
+
+<!--HTML 5 多媒体标签></!-->
+<!--
+标签				描述
+<video>			标签定义声音，比如音乐或其他音频流。
+<embed>			标签定义嵌入的内容，比如插件。></!-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

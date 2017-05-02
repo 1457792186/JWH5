@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<!--JavaScript 是脚本语言></!-->
+
+
+
+<!--JavaScript 能够直接写入 HTML 输出流中></!-->
+<script>
+document.write("<h1>This is a heading</h1>");
+document.write("<p>This is a paragraph.</p>");
+</script>
+<!--只能在 HTML 输出流中使用 document.write。如果在文档已加载后使用它（比如在函数中）,会覆盖整个文档></!-->
+
+
+
+
+<!--JavaScript:对事件作出反应></!-->
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+<!--alert() 函数在 JavaScript 中并不常用,但它对于代码测试非常方便></!-->
+<!--onclick 事件只是众多事件之一></!-->
+
+
+
+
+
+<!--JavaScript:改变 HTML 内容></!-->
+<!--使用 JavaScript 来处理 HTML 内容是非常强大的功能></!-->
+<script>
+function myFunction(){
+x=document.getElementById("demo");  // 找到元素
+x.innerHTML="Hello JavaScript!";    // 改变内容
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+<!--会经常看到 document.getElementByID("some id")。这个方法是 HTML DOM 中定义的></!-->
+<!--DOM（文档对象模型）是用以访问 HTML 元素的正式 W3C 标准></!-->
+
+
+
+
+
+
+
+
+<!--JavaScript:改变 HTML 图像></!-->
+<script>
+function changeImage(){
+element=document.getElementById('myimage')
+if (element.src.match("bulbon")){
+  element.src="/i/eg_bulboff.gif";
+  }
+else{
+  element.src="/i/eg_bulbon.gif";
+  }
+}
+</script>
+
+<img id="myimage" onclick="changeImage()" src="/i/eg_bulboff.gif">
+
+<p>点击灯泡来点亮或熄灭这盏灯</p>
+<!--JavaScript 能够改变任意 HTML 元素的大多数属性,而不仅仅是图片></!-->
+
+
+
+
+
+
+
+
+<!--JavaScript:改变 HTML 样式></!-->
+<!--改变 HTML 元素的样式,属于改变 HTML 属性的变种></!-->
+<script>
+function myFunction(){
+x=document.getElementById("demo") // 找到元素
+x.style.color="#ff0000";          // 改变样式
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+
+
+
+
+
+
+
+<!--JavaScript:JavaScript 常用于验证用户的输入验证输入></!-->
+<!--JavaScript 常用于验证用户的输入></!-->
+<script>
+function myFunction(){
+var x=document.getElementById("demo").value;
+if(x==""||isNaN(x)){
+	alert("Not Numeric");
+	}
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+
+
+
+
+
+
+
+
+
+
+<!--JavaScript 与 Java 是两种完全不同的语言,无论在概念还是设计上></!-->
+<!--Java（由 Sun 发明）是更复杂的编程语言></!-->
+<!--ECMA-262 是 JavaScript 标准的官方名称></!-->
+<!--JavaScript 由 Brendan Eich 发明。它于 1995 年出现在 Netscape 中（该浏览器已停止更新）,并于 1997 年被 ECMA（一个标准协会）采纳></!-->
+
+
+
+
+
+
+
+
+</body>
+</html>

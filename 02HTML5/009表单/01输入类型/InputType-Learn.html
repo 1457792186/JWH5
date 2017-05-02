@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="gb2312">
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<!--HTML5 新的 Input 类型></!-->
+
+<!--HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证></!-->
+
+<!--新的输入类型:
+email
+url
+number
+range
+Date pickers (date, month, week, time, datetime, datetime-local)
+search
+color></!-->
+
+
+
+
+
+
+<!--浏览器支持:
+Input type			IE		Firefox		Opera		Chrome		Safari
+email				No		4.0			9.0			10.0		No
+url					No		4.0			9.0			10.0		No
+number				No		No			9.0			7.0			No
+range				No		No			9.0			4.0			4.0
+Date pickers		No		No			9.0			10.0		No
+search				No		4.0			11.0		10.0		No
+color				No		No			11.0		No			No
+></!-->
+<!--Opera 对新的输入类型的支持最好。不过已经可以在所有主流的浏览器中使用它们了。即使不被支持,仍然可以显示为常规的文本域></!-->
+
+
+
+
+
+<!--Input 类型 - email></!-->
+<!--email 类型用于应该包含 e-mail 地址的输入域></!-->
+<!--在提交表单时,会自动验证 email 域的值></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+E-mail: <input type="email" name="user_email" /><br />
+<input type="submit" />
+</form><br/>
+<!--iPhone 中的 Safari 浏览器支持 email 输入类型,并通过改变触摸屏键盘来配合它（添加 @ 和 .com 选项）></!-->
+
+
+
+
+
+<!--Input 类型 - url></!-->
+<!--url 类型用于应该包含 URL 地址的输入域></!-->
+<!--在提交表单时,会自动验证 url 域的值></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Homepage: <input type="url" name="user_url" /><br />
+<input type="submit" />
+</form><br/>
+<!--iPhone 中的 Safari 浏览器支持 url 输入类型,并通过改变触摸屏键盘来配合它（添加 .com 选项）></!-->
+
+
+
+
+
+
+
+<!--Input 类型 - number></!-->
+<!--number 类型用于应该包含数值的输入域></!-->
+<!--还能够设定对所接受的数字的限定></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="number" name="points" min="1" max="10" />
+<input type="submit" />
+</form><br/>
+<!--使用下面的属性来规定对数字类型的限定:
+属性			值				描述
+max			number			规定允许的最大值
+min			number			规定允许的最小值
+step		number			规定合法的数字间隔（如果 step="3",则合法的数是 -3,0,3,6 等）
+value		number			规定默认值></!-->
+<!--带有所有限定属性的例子></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+<input type="number" name="points" min="0" max="10" step="3" value="6" />
+<input type="submit" />
+</form><br/>
+<!--iPhone 中的 Safari 浏览器支持 number 输入类型,并通过改变触摸屏键盘来配合它（显示数字）></!-->
+
+
+
+
+
+
+
+<!--Input 类型 - range></!-->
+<!--range 类型用于应该包含一定范围内数字值的输入域></!-->
+<!--range 类型显示为滑动条></!-->
+<!--还能够设定对所接受的数字的限定></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="range" name="points" min="1" max="10" />
+<input type="submit" />
+</form><br/>
+<!--使用下面的属性来规定对数字类型的限定:
+属性				值				描述
+max				number			规定允许的最大值
+min				number			规定允许的最小值
+step			number			规定合法的数字间隔（如果 step="3",则合法的数是 -3,0,3,6 等）
+value			number			规定默认值></!-->
+
+
+
+
+
+
+<!--Input 类型 - Date Pickers（日期选择器）></!-->
+<!--HTML5 拥有多个可供选取日期和时间的新输入类型:
+date - 选取日、月、年
+month - 选取月、年
+week - 选取周和年
+time - 选取时间（小时和分钟）
+datetime - 选取时间、日、月、年（UTC 时间）
+datetime-local - 选取时间、日、月、年（本地时间）></!-->
+<!--从日历中选取一个日期实例:></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Date: <input type="date" name="user_date" />
+<input type="submit" />
+</form><br/>
+
+<!--输入类型 "month"></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Month: <input type="month" name="user_date" />
+<input type="submit" />
+</form><br/>
+<!--输入类型 "week"></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Week: <input type="week" name="user_date" />
+<input type="submit" />
+</form><br/>
+<!--输入类型 "time"></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Time: <input type="time" name="user_date" />
+<input type="submit" />
+</form><br/>
+<!--输入类型 "datetime"></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Date and time: <input type="datetime" name="user_date" />
+<input type="submit" />
+</form><br/>
+<!--输入类型 "datetime-local"></!-->
+<form action="/example/html5/demo_form.asp" method="get">
+Date and time: <input type="datetime-local" name="user_date" />
+<input type="submit" />
+</form><br/>
+
+
+
+
+
+
+<!--Input 类型 - search></!-->
+<!--search 类型用于搜索域,比如站点搜索或 Google 搜索></!-->
+<!--search 域显示为常规的文本域></!-->
+
+
+
+
+
+
+</body>
+
+</html>

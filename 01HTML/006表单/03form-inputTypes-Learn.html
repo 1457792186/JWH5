@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-cn" />
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<!--<input type="text"> 定义供文本输入的单行输入字段></!-->
+<form>
+ First name:<br/>
+<input type="text" name="firstname">
+<br/>
+ Last name:<br/>
+<input type="text" name="lastname">
+</form> 
+<br/>
+
+
+
+<!--<input type="password"> 定义密码字段></!-->
+<form>
+ User name:<br/>
+<input type="text" name="username">
+<br/>
+ User password:<br/>
+<input type="password" name="psw">
+</form> 
+<br/>
+
+
+
+
+
+<!--<input type="submit"> 定义提交表单数据至表单处理程序的按钮。
+表单处理程序（form-handler）通常是包含处理输入数据的脚本的服务器页面。
+在表单的 action 属性中规定表单处理程序（form-handler）></!-->
+<form action="action_page.php">
+First name:<br/>
+<input type="text" name="firstname" value="Mickey">
+<br/>
+Last name:<br/>
+<input type="text" name="lastname" value="Mouse">
+<br/><br/>
+<input type="submit" value="Submit">
+</form> 
+<br/>
+
+<!--如果您省略了提交按钮的 value 属性,那么该按钮将获得默认文本></!-->
+<form action="action_page.php">
+First name:<br/>
+<input type="text" name="firstname" value="Mickey">
+<br/>
+Last name:<br/>
+<input type="text" name="lastname" value="Mouse">
+<br/><br/>
+<input type="submit">
+</form> 
+<br/>
+
+
+
+
+<!--<input type="radio"> 定义单选按钮></!-->
+<form>
+<input type="radio" name="sex" value="male" checked>Male
+<br/>
+<input type="radio" name="sex" value="female">Female
+</form> 
+<br/>
+
+
+
+
+<!--<input type="checkbox"> 定义复选框></!-->
+<form>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike
+<br/>
+<input type="checkbox" name="vehicle" value="Car">I have a car 
+</form> 
+<br/>
+
+
+
+
+<!--<input type="button> 定义按钮></!-->
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--HTML5 增加新的输入类型></!-->
+<!--
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+></!-->
+<!--老式 web 浏览器不支持的输入类型，会被视为输入类型 text></!-->
+
+<!--<input type="number"> 用于应该包含数字值的输入字段></!-->
+<!--能够对数字做出限制></!-->
+<!--根据浏览器支持，限制可应用到输入字段></!-->
+<form>
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+<br/>
+<!--一些常用的输入限制（其中一些是 HTML5 中新增的）></!-->
+<!--
+disabled	规定输入字段应该被禁用。
+max			规定输入字段的最大值。
+maxlength	规定输入字段的最大字符数。
+min			规定输入字段的最小值。
+pattern		规定通过其检查输入值的正则表达式。
+readonly	规定输入字段为只读（无法修改）。
+required	规定输入字段是必需的（必需填写）。
+size		规定输入字段的宽度（以字符计）。
+step		规定输入字段的合法数字间隔。
+value		规定输入字段的默认值。></!-->
+<form>
+  Quantity:
+  <input type="number" name="points" min="0" max="100" step="10" value="30">
+</form>
+<!--type="number"不支持IE9 and earlier.></!-->	
+<br/>
+
+
+<!--以下type属性 不支持 Internet Explorer></!-->
+
+
+
+<!--<input type="date"> 用于应该包含日期的输入字段。根据浏览器支持,日期选择器会出现输入字段中></!-->
+<form>
+  Birthday:
+  <input type="date" name="bday">
+</form>
+<br/>
+<!--向输入添加限制></!-->
+<form>
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br/>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br/>
+</form>
+<br/>
+
+
+
+
+<!--<input type="color"> 用于应该包含颜色的输入字段。根据浏览器支持,颜色选择器会出现输入字段中></!-->
+<form>
+  Select your favorite color:
+  <input type="color" name="favcolor">
+</form>
+<br/>
+
+
+
+
+<!--<input type="range"> 用于应该包含一定范围内的值的输入字段。根据浏览器支持,输入字段能够显示为滑块控件></!-->
+<form>
+  <input type="range" name="points" min="0" max="10">
+</form>
+<!--能够使用如下属性来规定限制:min、max、step、value></!-->
+<br/>
+
+
+
+
+<!--<input type="month"> 允许用户选择月份和年份。根据浏览器支持,日期选择器会出现输入字段中></!-->
+<form>
+  Birthday (month and year):
+  <input type="month" name="bdaymonth">
+</form>
+<br/>
+
+
+
+
+<!--<input type="week"> 允许用户选择周和年。根据浏览器支持,日期选择器会出现输入字段中></!-->
+<form>
+  Select a week:
+  <input type="week" name="week_year">
+</form>
+<br/>
+
+
+
+<!--<input type="time"> 允许用户选择时间（无时区）。根据浏览器支持,时间选择器会出现输入字段中></!-->
+<form>
+  Select a time:
+  <input type="time" name="usr_time">
+</form>
+<!--type="time" is not supported in Firefox or Internet Explorer></!-->
+<br/>
+
+
+
+
+<!--<input type="datetime"> 允许用户选择日期和时间（有时区）。根据浏览器支持,日期选择器会出现输入字段中></!-->
+<form>
+  Birthday (date and time):
+  <input type="datetime" name="bdaytime">
+</form>
+<!--type="datetime" is not supported in Chrome, Firefox, or Internet Explorer></!-->
+<br/>
+
+
+
+
+<!--<input type="datetime-local"> 允许用户选择日期和时间（无时区）。根据浏览器支持,日期选择器会出现输入字段中></!-->
+<form>
+  Birthday (date and time):
+  <input type="datetime-local" name="bdaytime">
+</form>
+<!--type="datetime-local" is not supported in Firefox and Internet Explorer.></!-->
+<br/>
+
+
+
+
+<!--<input type="email"> 用于应该包含电子邮件地址的输入字段。根据浏览器支持,能够在被提交时自动对电子邮件地址进行验证。某些智能手机会识别 email 类型,并在键盘增加 ".com" 以匹配电子邮件输入></!-->
+<form>
+  E-mail:
+  <input type="email" name="email">
+</form>
+<!--type="email" is not supported in IE9 and earlier></!-->
+<br/>
+
+
+
+
+<!--<input type="search"> 用于搜索字段（搜索字段的表现类似常规文本字段）></!-->
+<form>
+  Search Google:
+  <input type="search" name="googlesearch">
+</form>
+<br/>
+
+
+
+
+<!--<input type="tel"> 用于应该包含电话号码的输入字段。></!-->
+<form>
+  Telephone:
+  <input type="tel" name="usrtel">
+</form>
+<!--<input type="tel"> 用于应该包含电话号码的输入字段。目前只有 Safari 8 支持 tel 类型></!-->
+<br/>
+
+
+
+
+
+<!--<input type="url"> 用于应该包含 URL 地址的输入字段。
+根据浏览器支持,在提交时能够自动验证 url 字段。
+某些智能手机识别 url 类型,并向键盘添加 ".com" 以匹配 url 输入></!-->
+<form>
+  Add your homepage:
+  <input type="url" name="homepage">
+</form>
+<br/>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-cn" />
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+
+<!--在 HTML 中播放音频,方法有很多种,需要谙熟大量技巧,以确保音频文件在所有浏览器中（Internet Explorer, Chrome, Firefox, Safari, Opera）和所有硬件上（PC, Mac , iPad, iPhone）都能够播放></!-->
+
+
+<!--解决方法></!-->
+
+<!--使用插件></!-->
+<!--浏览器插件是一种扩展浏览器标准功能的小型计算机程序></!-->
+<!--插件有很多用途:播放音乐、显示地图、验证银行账号，控制输入等等></!-->
+<!--可使用 <object> 或 <embed> 标签来将插件添加到 HTML 页面。></!-->
+<!--这些标签定义资源（通常非 HTML 资源）的容器,根据类型,它们即会由浏览器显示,也会由外部插件显示></!-->
+
+
+
+<!--使用 <embed> 元素></!-->
+<!--<embed> 标签定义外部（非 HTML）内容的容器。（这是一个 HTML5 标签,在 HTML4 中是非法的,但是所有浏览器中都有效）></!-->
+<embed height="100" width="100" src="Supporting/poi~poi~poi~.mp3" />
+<!--
+<embed> 标签在 HTML 4 中是无效的。页面无法通过 HTML 4 验证。
+不同的浏览器对音频格式的支持也不同。
+如果浏览器不支持该文件格式,没有插件的话就无法播放该音频。
+如果用户的计算机未安装插件,无法播放音频。
+如果把该文件转换为其他格式,仍然无法在所有浏览器中播放></!-->
+<!--使用 <!DOCTYPE html> (HTML5) 解决验证问题></!-->
+
+
+
+<!--使用 <object> 元素></!-->
+<!--<object tag> 标签也可以定义外部（非 HTML）内容的容器></!-->
+<object height="100" width="100" data="Supporting/poi~poi~poi~.mp3"></object>
+<!--
+不同的浏览器对音频格式的支持也不同。
+如果浏览器不支持该文件格式,没有插件的话就无法播放该音频。
+如果用户的计算机未安装插件,无法播放音频。
+如果把该文件转换为其他格式,仍然无法在所有浏览器中播放></!-->
+
+
+
+
+
+<!--使用 HTML5 <audio> 元素></!-->
+<!--<audio> 元素是一个 HTML5 元素,在 HTML 4 中是非法的,但在所有浏览器中都有效></!-->
+<audio controls="controls">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+  Your browser does not support this audio format.
+</audio>
+<!--使用了一个 mp3 文件,这样它在 Internet Explorer、Chrome 以及 Safari 中是有效的。
+为了使这段音频在 Firefox 和 Opera 中同样有效,添加了一个 ogg 类型的文件。如果失败,会显示错误消息></!-->
+<!--<audio> 标签在 HTML 4 中是无效的。页面无法通过 HTML 4 验证。
+必须把音频文件转换为不同的格式。
+<audio> 元素在老式浏览器中不起作用></!-->
+<!--使用 <!DOCTYPE html> (HTML5) 解决验证问题></!-->
+
+
+
+
+
+<!--最好的 HTML 解决方法></!-->
+<audio controls="controls" height="100" width="100">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+  <embed height="100" width="100" src="song.mp3" />
+</audio>
+<!--使用了两个不同的音频格式。HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。如果失败，代码将回退尝试 <embed> 元素></!-->
+<!--
+必须把音频转换为不同的格式。
+<audio> 元素无法通过 HTML 4 和 XHTML 验证。
+<embed> 元素无法通过 HTML 4 和 XHTML 验证。
+<embed> 元素无法回退来显示错误消息></!-->
+<!--使用 <!DOCTYPE html> (HTML5) 解决验证问题></!-->
+
+
+
+
+
+<!--向网站添加音频的最简单方法></!-->
+
+<!--雅虎媒体播放器></!-->
+<a href="Supporting/poi~poi~poi~.mp3">Play Sound</a>
+<script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+</script>
+<!--使用雅虎播放器是免费的。如需使用它,需要把这段 JavaScript 即:<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script> 插入网页底部,然后只需简单地把 MP3 文件链接到您的 HTML 中,JavaScript 会自动地为每首歌创建播放按钮></!-->
+<!--雅虎媒体播放器为用户提供的是一个小型的播放按钮,而不是完整的播放器。不过,当点击该按钮,会弹出完整的播放器。注意,这个播放器始终停靠在窗框底部。只需点击它,就可将其滑出></!-->
+
+
+
+<!--使用超链接></!-->
+<!--如果网页包含指向媒体文件的超链接，大多数浏览器会使用“辅助应用程序”来播放文件></!-->
+<a href="Supporting/poi~poi~poi~.mp3">Play the sound</a>
+<!--如果用户点击该链接，浏览器会启动“辅助应用程序”来播放该文件></!-->
+
+
+
+
+<!--内联的声音></!-->
+<!--在网页中包含声音，或者作为网页的组成部分时，它被称为内联声音></!-->
+<!--如果打算在 web 应用程序中使用内联声音,需要意识到很多人都觉得内联声音令人恼火。同时注意,用户可能已经关闭了浏览器中的内联声音选项></!-->
+<!--最好的建议是只在用户希望听到内联声音的地方包含它们。一个正面的例子是,在用户需要听到录音并点击某个链接时,会打开页面然后播放录音></!-->
+
+
+
+
+
+<!--HTML 4.01 多媒体标签></!-->
+<!--
+标签					描述
+<applet>			不赞成。定义内嵌 applet。
+<embed>				HTML4 中不赞成，HTML5 中允许。定义内嵌对象。
+<object>			定义内嵌对象。
+<param>				定义对象的参数。
+></!-->
+
+
+
+<!--HTML 5 多媒体标签></!-->
+<!--
+标签				描述
+<audio>			标签定义声音，比如音乐或其他音频流。
+<embed>			标签定义嵌入的内容，比如插件。
+></!-->
+
+
+
+
+
+
+</body>
+
+</html>

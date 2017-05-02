@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--UTF-8编码></!-->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+
+
+<!--iframe 用于在网页内显示网页></!-->
+<!--某些老式的浏览器不支持内联框架></!-->
+<!--如果不支持,则iframe是不可见的></!-->
+<iframe src="Index.html" width="200" height="200"></iframe>
+<!--src内URL指向隔离页面的位置></!-->
+<!--height 和 width 属性用于规定 iframe 的高度和宽度。属性值的默认单位是像素,但也可以用百分比来设定(比如"80%")></!-->
+
+
+<br/>
+
+
+<iframe src="Index.html" width="200" height="200" frameborder="0"></iframe>
+<!--frameborder 属性规定是否显示 iframe 周围的边框。设置属性值为 "0" 就可以移除边框></!-->
+
+
+<br/>
+
+
+<iframe src="Index.html" name="iframe233"></iframe>
+<p><a href="http://www.w3school.com.cn" target="iframe233">W3School.com.cn</a></p>
+<!--iframe 可用作链接的目标（target）。链接的 target 属性必须引用 iframe 的 name 属性></!-->
+<!--由于链接的目标匹配iframe的name,所以链接会在 iframe 中打开></!-->
+
+
+
+</body>
+
+</html>

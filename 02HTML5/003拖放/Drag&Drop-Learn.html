@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="gb2312">
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+
+	<!--拖放（Drag 和 drop）是 HTML5 标准的组成部分></!-->
+
+	<!--拖放></!-->
+	<!--拖放是一种常见的特性,即抓取对象以后拖到另一个位置></!-->
+	<!--在 HTML5 中,拖放是标准的一部分,任何元素都能够拖放></!-->
+
+	<!--浏览器支持></!-->
+	<!--Internet Explorer 9、Firefox、Opera 12、Chrome 以及 Safari 5 支持拖放></!-->
+	<!--在 Safari 5.1.2 中不支持拖放></!-->
+
+	<!--HTML5 拖放实例></!-->
+	<script type="text/javascript">
+	function allowDrop(ev){
+	ev.preventDefault();
+	}
+
+	function drag(ev){
+	ev.dataTransfer.setData("Text",ev.target.id);
+	}
+
+	function drop(ev){
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+	}
+	</script>
+
+</head>
+
+</head>
+
+<body>
+
+
+<!--拖放实例></!-->
+<div id="div1" ondrop="drop(event)"
+ondragover="allowDrop(event)"></div>
+<img id="drag1" src="img_logo.gif" draggable="true"
+ondragstart="drag(event)" width="336" height="69" />
+<!--1.设置元素为可拖放:为了使元素可拖动,把 draggable 属性设置为 true></!-->
+<!--如:<img draggable="true" />></!-->
+
+<!--2.拖动什么 - ondragstart 和 setData()></!-->
+<!--上面的例子中,ondragstart 属性调用了一个函数,drag(event),它规定了被拖动的数></!-->
+
+<!--3.放到何处 - ondragover></!-->
+<!--ondragover 事件规定在何处放置被拖动的数据></!-->
+<!--默认地,无法将数据/元素放置到其他元素中。如果需要设置允许放置,必须阻止对元素的默认处理方式,这要通过调用 ondragover 事件的 event.preventDefault() 方法></!-->
+
+<!-->4.进行放置 - ondrop</!-->
+<!--当放置被拖数据时,会发生 drop 事件></!-->
+<!--在上面的例子中,ondrop 属性调用了一个函数,drop(event)></!-->
+
+
+<!--
+说明:
+调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+被拖数据是被拖元素的 id ("drag1")
+把被拖元素追加到放置元素（目标元素）中
+></!-->
+
+
+
+</body>
+
+</html>

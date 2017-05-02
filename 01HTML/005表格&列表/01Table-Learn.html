@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--UTF-8编码></!-->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+<!--<table>:定义表格;
+<caption>:定义表格标题;
+<th>:定义表格的表头;
+<tr>:定义表格的行;
+<td>:定义表格单元;
+<thead>:定义表格的页眉;
+<tbody>:定义表格的主体;
+<tfoot>:定义表格的页脚;
+<col>:定义用于表格列的属性;
+<colgroup>:定义表格列的组.></!-->
+
+
+
+<table border="1">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td></tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td></tr>
+</table><br/>
+<!--表格由 <table> 标签来定义></!-->
+<!--每个表格均有若干行(由 <tr> 标签定义)></!-->
+<!--每行被分割为若干单元格(由 <td> 标签定义)></!-->
+<!--td 指表格数据(table data),即数据单元格的内容.数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等></!-->
+
+<h4>这个表格没有边框：</h4>
+<table>
+<tr>
+ <td>100</td>
+ <td>200</td>
+ <td>300</td></tr>
+<tr>
+ <td>400</td>
+ <td>500</td>
+ <td>600</td></tr>
+</table>
+
+<h4>这个表格也没有边框：</h4>
+<table border="0">
+<tr>
+ <td>100</td>
+ <td>200</td>
+ <td>300</td></tr>
+<tr>
+ <td>400</td>
+ <td>500</td>
+ <td>600</td></tr>
+</table>
+<!--border:定义边框属性;不定义边框属性,表格将不显示边框.有时这很有用,但是大多数时候显示边框.></!-->
+
+
+<h4>表头：</h4>
+<table border="1">
+<tr>
+<th>Heading</th>
+<th>Another Heading</th>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td></tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td></tr>
+</table>
+
+<h4>表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th>电话</th>
+  <th>电话</th></tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td></tr>
+</table>
+
+<h4>垂直的表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td></tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 854</td></tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 855</td></tr>
+</table>
+<!--th:定义表格的表头,大多数浏览器会把表头显示为粗体居中的文本></!-->
+
+
+<p>其中一个单元没有边框.这是因为它是空的.在该单元中插入一个空格后,仍然没有边框.</p>
+<table border="1">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td></tr>
+<tr>
+<td></td>
+<td>row 2, cell 2</td></tr>
+</table>
+<!--在一些浏览器中,没有内容的表格单元显示得不太好.如果某个单元格是空的(没有内容),浏览器可能无法显示出这个单元格的边框></!-->
+<!--为了避免这种情况,在空单元格中添加一个空格占位符,就可以将边框显示出来></!-->
+<p>在单元中插入一个no-breaking空格-&nbsp;</p>
+<table border="1">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>row 2, cell 2</td></tr>
+</table>
+<!--&nbsp;:空格占位符></!-->
+
+
+<h4>这个表格有一个标题,以及粗边框:</h4>
+<table border="6">
+<caption>我的标题</caption>
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td></tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td></tr>
+</table>
+<!--caption:表格标题></!-->
+
+
+<h4>横跨两列的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th colspan="2">电话</th></tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td></tr>
+</table>
+<!--colspan:水平占据2个单元格长度></!-->
+
+<h4>横跨两行的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">电话</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+<!--rowspan:垂直占据2个单元格长度></!-->
+
+
+<h4>表格内的标签,在不同的元素内显示元素</h4>
+<table border="1">
+<tr>
+  <td>
+   <p>这是一个段落。</p>
+   <p>这是另一个段落。</p></td>
+  <td>这个单元包含一个表格：
+   <table border="1">
+   <tr>
+     <td>A</td>
+     <td>B</td></tr>
+   <tr>
+     <td>C</td>
+     <td>D</td></tr></table></td></tr>
+<tr>
+  <td>这个单元包含一个列表：
+   <ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>菠萝</li></ul></td>
+  <td>HELLO</td></tr></table>
+
+
+
+<!--单元格边距(Cell padding)></!-->
+<h4>没有 cellpadding:</h4>
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+<h4>带有 cellpadding：</h4>
+<table border="1"  cellpadding="10">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+
+<!--单元格间距(Cell spacing)></!-->
+<h4>没有 cellspacing：</h4>
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+<h4>带有 cellspacing：</h4>
+<table border="1" 
+cellspacing="10">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+
+
+<!--向表格添加背景颜色或背景图像></!-->
+<h4>背景颜色：</h4>
+<table border="1" 
+bgcolor="red">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+<h4>背景图像：</h4>
+<table border="1" background="233.jpg">
+<tr>
+  <td>First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td></tr>
+</table>
+
+<!--向表格单元添加背景颜色或者背景图像></!-->
+<h4>单元背景：</h4>  
+<table border="1">
+<tr>
+  <td bgcolor="red">First</td>
+  <td>Row</td></tr>   
+<tr>
+  <td background="233.jpg">
+  Second</td>
+  <td>Row</td></tr>
+</table>
+
+
+<!--使用 "align" 属性排列单元格内容,以便创建一个美观的表格,在表格单元中排列内容></!-->
+<h4>在表格单元中排列内容</h4>
+<table width="400" border="1">
+ <tr>
+  <th align="left">消费项目</th>
+  <th align="right">一月</th>
+  <th align="right">二月</th></tr>
+ <tr>
+  <td align="left">衣服</td>
+  <td align="right">$241.10</td>
+  <td align="right">$50.20</td></tr>
+ <tr>
+  <td align="left">化妆品</td>
+  <td align="right">$30.00</td>
+  <td align="right">$44.45</td></tr>
+ <tr>
+  <td align="left">食物</td>
+  <td align="right">$730.40</td>
+  <td align="right">$650.00</td></tr>
+ <tr>
+  <th align="left">总计</th>
+  <th align="right">$1001.50</th>
+  <th align="right">$744.65</th></tr>
+</table>
+
+
+<!--框架(frame)属性:frame 属性无法在 Internet Explorer 中正确地显示></!-->
+<!--frame="box"></!-->
+<p>Table with frame="box":</p>
+<table frame="box">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th></tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td></tr>
+</table>
+
+<!--frame="above"></!-->
+<p>Table with frame="above":</p>
+<table frame="above">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<!--frame="below"></!-->
+<p>Table with frame="below":</p>
+<table frame="below">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th></tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td></tr>
+</table>
+
+<!--frame="hsides"></!-->
+<p>Table with frame="hsides":</p>
+<table frame="hsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th></tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td></tr>
+</table>
+
+<!--frame="vsides"></!-->
+<p>Table with frame="vsides":</p>
+<table frame="vsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th></tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td></tr>
+</table>
+
+
+
+</body>
+
+</html>

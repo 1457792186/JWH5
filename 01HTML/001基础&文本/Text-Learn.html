@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	<!--网站源码：要揭示一个网站的技术秘密，其实很简单。单击浏览器的“查看”菜单，选择“查看源文件”即可。随后你会看到一个弹出的窗口，窗口内就是实际的 HTML 代码></!-->
+
+
+</head>
+
+<body>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--UTF-8编码></!-->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+
+
+
+
+
+<!--注释></!-->
+<!-- Write your comments here -->
+
+<!--注释:注释对于 HTML 纠错也大有帮助,因为可以一次注释一行 HTML 代码,以搜索错误></!-->
+<!-- 此刻不显示图片：<img border="0" src="pic_mountain.jpg" alt="Mountain">-->
+
+<!--各种 HTML 软件程序也能够生成 HTML 注释;如:></!-->
+<!--webbot bot-->
+<!--此标签会被包围在由 FrontPage 和 Expression Web 创建的 HTML 注释中></!-->
+
+<!--条件注释:条件注释定义只有 Internet Explorer 执行的 HTML 标签></!-->
+<!--[if IE 8]>.... some HTML here ....<![endif]-->
+
+
+
+
+
+
+
+<body bgcolor = "yellow">
+<body style="background-color:yellow">
+<!--背景色(注释)></!-->
+<!--因为bgcolor属性被废弃,所以尽量用style属性设置,style 属性淘汰了“旧的” bgcolor 属性></!-->
+
+
+
+
+
+
+
+
+<h1> This first tittle</h1>
+<!--标题></!-->
+<h1> This first tittle</h1>
+<h2 align="center">This second tittle</h2>
+<!--标题，h2比h1小，共有h1-h6，align设置样式居中></!-->
+<h3  class="规定元素的类名（classname）" id="规定元素的唯一 id" style="规定元素的行内样式" title="规定元素的额外信息（可在工具提示中显示）">This is third tittle</h3>
+<!--class,id,style,tittle为适用HTML大多数元素的属性></!-->
+
+
+
+
+
+
+
+
+<p>this is a paragraph</p>
+<!--段落></!-->
+<p>This is<br/>a para<br/>graph with line breaks</p>
+<!--折行></!-->
+<p>
+    春眠不觉晓，
+      处处闻啼鸟。
+        夜来风雨声，
+          花落知多少。
+</p>
+<!--浏览器忽略了源代码中的排版（省略了多余的空格和换行）,无法通过在HTML代码中添加额外的空格或换行来改变输出的效果。></!-->
+
+
+
+<!--文本格式化></!-->
+<b>This text is bold</b><br/>
+<!--b:定义粗体文本></!-->
+<strong>This text is strong</strong><br/>
+<!--strong:定义加重语气></!-->
+<big>This text is big</big><br/>
+<!--big:定义大号字></!-->
+<em>This text is emphasized</em><br/>
+<!--em:定义着重文字></!-->
+<i>This text is italic</i><br/>
+<!--i:定义斜体字></!-->
+<small>This text is small</small><br/>
+<!--small:定义小号字></!-->
+<sub>subscript</sub><br/>
+<!--sub:定义下标字></!-->
+<sup>superscript</sup>
+<!--sup:定义上标字></!-->
+
+
+
+<!--文字样式></!-->
+<p style="font-family:verdana;color:red">
+This text is in Verdana and red</p>
+<p style="font-family:times;color:green">
+This text is in Times and green</p>
+<p style="font-size:30px">This text is 30 pixels high</p>
+<!--style属性:一种改变所有 HTML 元素的样式的通用方法。font-family:字体类型,color:颜色,font-size:大小,text-align:center:元素中文本的水平对齐方式></!-->
+<!--下列若干的标签和属性是被废弃的,请使用style代替></!-->
+<!--center:定义居中的内容,font:定义HTML字体,s:定义删除线文本,strike:定义删除线文本,u:定义下划线文本,align:定义文本的对齐方式,bgcolor:定义背景颜色,color:定义文本颜色></!-->
+<!--style 属性淘汰了旧的 <font> 标签,用font-family,font-size,color;
+style 属性淘汰了“旧的” bgcolor 属性,用background-color;
+style 属性淘汰了旧的 "align" 属性,用text-align:center
+style 属性淘汰了旧的 "u" 属性,用text-align:center></!-->
+<p>一打有 <del>二十</del> <ins>十二</ins> 件。</p>
+<!--del:大多数浏览器会改写为删除文本和下划线文本,一些老式的浏览器会把删除文本和下划线文本显示为普通文本,s,strike使用<del>代替></!-->
+<!--ins:定义插入字></!-->
+
+
+
+
+<pre>
+for i = 1 to 10
+     print i
+next i
+</pre>
+<!--pre:这是预格式文本。它保留了空格和换行。适合显示计算机代码></!-->
+<!--code:定义计算机代码,kbd:定义键盘码,samp:定义计算机代码样本,tt:定义打字机代码,var:定义变量,pre:定义预格式文本></!-->
+
+<p>To open a file, select:</p>
+<p><kbd>File | Open...</kbd></p>
+<!--kbd:定义键盘输入></!-->
+
+<samp>demo.example.com login: Apr 12 09:10:17
+Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189</samp><br/>
+<!--samp:定义计算机输出></!-->
+
+<code>var person = {
+    firstName:"Bill",
+    lastName:"Gates",
+    age:50,
+    eyeColor:"blue"
+}</code><br/>
+<!--code:定义编程代码,不保留多余的空格和折行></!-->
+<!--如需解决该问题，您必须在 <pre> 元素中包围代码></!-->
+<p>Coding Example:</p>
+<code><pre>var person = {
+    firstName:"Bill",
+    lastName:"Gates",
+    age:50,
+    eyeColor:"blue"
+}</pre></code><br/>
+<!--定义编程代码,保留多余的空格和折行></!-->
+<p><var>E = m c<sup>2</sup></var></p>
+<!--var:定义数学变量></!-->
+<!--listing,plaintext,xmp:不赞成使用,使用 <pre> 代替></!-->
+
+<address>
+Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br/> 
+Visit us at:<br/>
+Example.com<br/>
+Box 564, Disneyland<br/>
+USA
+</address>
+<!--address:定义文档或文章的联系信息、地址等;此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行></!-->
+
+<abbr title="etcetera">etc.</abbr><br/>
+<!--abbr:定义缩写></!-->
+<p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
+<!--对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息></!-->
+<acronym title="World Wide Web">WWW</acronym><br/>
+<!--acronym:定义首字母缩写></!-->
+<!--在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本></!-->
+<!--仅对于 IE 5 中的 acronym 元素有效></!-->
+<!--对于Netscape6.2中的abbr和acronym元素都有效></!-->
+
+<bdo dir="rtl">Here is some Hebrew text</bdo><br/>
+<!--bdo:定义文字方向(双向重写)></!-->
+<!--如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl),rtl表示从右向左方向></!-->
+
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+<!--cite:定义定义著作的标题,浏览器通常会以斜体显示 <cite> 元素></!-->
+
+<dfn>定义一个定义项目</dfn><br/>
+<!--dfn:定义项目或缩写的定义></!-->
+<p><dfn title="World Health Organization">WHO</dfn> 成立于 1948 年。</p>
+<!--如果设置了 <dfn> 元素的 title 属性，则定义项目></!-->
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
+<!--如果 <dfn> 元素包含具有标题的 <abbr> 元素，则 title 定义项目></!-->
+<p><dfn>WHO</dfn> World Health Organization 成立于 1948 年。</p>
+<!--否则，<dfn> 文本内容即是项目，并且父元素包含定义></!-->
+
+<blockquote>这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。</blockquote><br/>
+<!--blockquote:定义长的引用></!-->
+<p>以下内容引用自网站：</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+五十年来,一直致力于保护自然界的未来。
+世界领先的环保组织,工作于 100 个国家，
+并得到美国一百二十万会员及全球近五百万会员的支持。
+</blockquote>
+<!--浏览器通常会对 <blockquote> 元素进行缩进处理></!-->
+<q>这是短的引用</q><br/>
+<!--q:定义短的引用语></!-->
+<p>目标是：<q>构建人与自然和谐共存的世界。</q></p>
+<!--浏览器通常会为 <q> 元素包围引号></!-->
+<!--使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现></!-->
+
+
+
+<a href="http:www.w3school.com.cn">Tjis is a link</a>
+<!--链接></!-->
+<br><br/>
+<!--换行></!-->
+
+
+<hr/><br/>
+<!--hr:水平线></!-->
+
+
+</body>
+
+</html>

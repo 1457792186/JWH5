@@ -1,0 +1,161 @@
+<!--1.更改为 HTML5 Doctype></!-->
+<!--修改文档类型,从 HTML4 doctype:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+></!-->
+<!DOCTYPE html>
+<!--修改为 HTML5 doctype></!-->
+
+<html lang="en">
+<head>
+
+<!--2.更改为 HTML5 编码></!-->
+<!--修改编码信息，从 HTML4:
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+></!-->
+<meta charset="utf-8">
+<!--改为 HTML5></!-->
+
+<title>HTML5</title>
+
+
+<!--3.添加 shiv,所有现代浏览器都支持 HTML5 语义元素。为 Internet Explorer 支持而添加的 shiv可以"教授"老式浏览器如何处理“未知元素”></!-->
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+<!--4.为 HTML5 语义元素添加 CSS></!-->
+<!--HTML CSS样式:
+<style>
+  body {font-family:Verdana,sans-serif;font-size:0.8em;}
+  div#header,div#footer,div#content,div#post 
+  {border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;}
+  div#header,div#footer {color:white;background-color:#444;margin-bottom:5px;}
+  div#content {background-color:#ddd;}
+  div#menu ul {margin:0;padding:0;}
+  div#menu ul li {display:inline; margin:5px;}
+</style>
+></!-->
+<style>
+  body {font-family:Verdana,sans-serif;font-size:0.8em;}
+  header,footer,section,article {
+    border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;}
+	header,footer {
+	    color:white;background-color:#444;margin-bottom:5px;}
+	section {
+	    background-color:#ddd;}
+	nav ul  {
+	    margin:0;padding:0;}
+	nav ul li {
+	    display:inline; margin:5px;}
+</style>
+<!--更改为 HTML5 CSS样式></!-->
+
+
+</head>
+
+
+<body>
+
+
+<!--5.更改为 HTML5 <header> 和 <footer>></!-->
+<!--把 id="header" 的 <div> ></!-->
+<!--
+<div id="header">
+  <h1>Monday Times</h1>
+</div>
+></!-->
+<header>
+  <h1>Monday Times</h1>
+</header>
+<!--修改为 HTML5 语义元素 <header>></!-->
+
+
+<!--6.更改为 HTML5 <nav>></!-->
+<!--把 id="menu" 的 <div> 元素></!-->
+<!--
+<div id="menu">
+  <ul>
+    <li>News</li>
+    <li>Sports</li>
+    <li>Weather</li>
+  </ul>
+</div>
+></!-->
+<nav>
+  <ul>
+    <li>News</li>
+    <li>Sports</a></li>
+    <li>Weather</li>
+  </ul>
+</nav>
+<!--修改为 HTML5 语义元素 <nav>></!-->
+
+<!--7.更改为 HTML5 <section>></!-->
+<!--把 id="content" 的 the <div> 元素></!-->
+<!--
+<div id="content">
+.
+.
+.
+</div>
+></!-->
+<!--修改为 HTML5 语义元素 <section>></!-->
+<!--
+<section>
+.
+.
+.
+</section>></!-->
+<section>
+<h2>News Section</h2>
+
+
+<!--8.更改为 HTML5 <article>></!-->
+<!--把 class="post" 的所有 <div> 元素></!-->
+<!--
+<div class="post">
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+</div>
+></!-->
+<article>
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+</article>
+<!--修改为 HTML5 语义元素 <article>></!-->
+
+<article>
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+</article>>
+
+</section>
+
+
+
+<!--5.更改为 HTML5 <header> 和 <footer>></!-->
+<!--把id="footer" 的 <div> 元素></!-->
+<!--
+<div id="footer">
+  <p>&copy; 2014 Monday Times. All rights reserved.</p>
+</div>
+></!-->
+<footer>
+  <p>© 2014 W3Schools. All rights reserved.</p>
+</footer>
+<!--修改为 HTML5 语义元素 <footer>></!-->
+
+
+
+</body>
+
+
+</html>

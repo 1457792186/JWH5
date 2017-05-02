@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>HTML5</title>
+
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+  body {font-family:Verdana,sans-serif;font-size:0.8em;}
+  header,footer,section,article {
+    border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;}
+	header,footer {
+	    color:white;background-color:#444;margin-bottom:5px;}
+	section {
+	    background-color:#ddd;}
+	nav ul  {
+	    margin:0;padding:0;}
+	nav ul li {
+	    display:inline; margin:5px;}
+</style>
+
+
+</head>
+
+
+<body>
+
+<!--<article> <section> 与 <div> 之间的差异></!-->
+<!--在 HTML5 标准中;<article> <section> 与 <div> 之间的差异很小,<section> 元素被定位为相关元素的块,<article> 元素被定义为相关元素的完整的自包含块,<div> 元素被定义为子元素的块></!-->
+
+
+<!-- <section> 作为相关 <articles> 的容器。但是,也能够把 <article> 用作文章的容器></!-->
+
+
+<h1>section 中的 article</h1>
+<!--<section> 中的 <article>></!-->
+<section>
+
+<article>
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+</article>
+
+<article>
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+  <h2>News Article</h2>
+  <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum 
+  lurum hurum turum.</p>
+</article>
+
+</section>
+
+
+
+
+
+
+<hr/>
+
+
+
+
+
+
+<h1>article 中的 article</h1>
+<!--<article> 中的 <article>></!-->
+<article>
+
+<h2>Famous Cities</h2>
+
+<article>
+<h2>London</h2>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.</p>
+</article>
+
+<article>
+<h2>Paris</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</article>
+
+<article>
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</article>
+
+</article>
+
+
+
+
+
+
+
+
+<hr/>
+
+
+
+
+
+
+
+<h1>article 中的 div</h1>
+<!--<article> 中的 <div>></!-->
+<article>
+
+<h2>Famous Cities</h2>
+
+<div class="city">
+<h2>London</h2>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="city">
+<h2>Paris</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="city">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+
+</article>
+
+
+
+
+
+
+
+
+<hr/>
+
+
+
+
+
+<h1>article 中的 section 中的 div</h1>
+<!--<article> 中的 <section> 中的 <div>></!-->
+<article>
+
+<section>
+<h2>Famous Cities</h2>
+
+<div class="city">
+<h2>London</h2>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="city">
+<h2>Paris</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="city">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+</section>
+
+<section>
+<h2>Famous Countries</h2>
+
+<div class="country">
+<h2>England</h2>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="country">
+<h2>France</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="country">
+<h2>Japan</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+</section>
+
+</article>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

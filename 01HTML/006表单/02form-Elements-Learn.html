@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-cn" />
+	<!--charset=gb2312:中文编码（取消中文显示乱码）></!-->
+
+	<title>@"2333333Html"</title>
+	<!--网页标题(注释)-->
+	
+
+</head>
+
+<body>
+
+<!--HTML 表单元素></!-->
+
+<!--<input> 元素:最重要的表单元素是 <input> 元素。
+<input> 元素根据不同的 type 属性,可以变化为多种形态。
+></!-->
+<!--<input>有很多形态,根据不同的 type 属性></!-->
+<!--
+text	定义常规文本输入。
+radio	定义单选按钮输入（选择多个选择之一）
+submit	定义提交按钮（提交表单）
+></!-->
+<!--文本输入:<input type="text"> 定义用于文本输入的单行输入字段></!-->
+<form>
+ First name:<br/>
+<input type="text" name="firstname">
+<br/>
+ Last name:<br/>
+<input type="text" name="lastname">
+</form> 
+<br/>
+
+<!--单选按钮输入:<input type="radio"> 定义单选按钮。单选按钮允许用户在有限数量的选项中选择其中之一></!-->
+<form>
+<input type="radio" name="sex" value="male" checked>Male
+<br/>
+<input type="radio" name="sex" value="female">Female
+</form> 
+<!--checked默认选中></!-->
+<br/>
+
+<!--提交按钮:<input type="submit"> 定义用于向表单处理程序（form-handler）提交表单的按钮。
+表单处理程序通常是包含用来处理输入数据的脚本的服务器页面。
+表单处理程序在表单的 action 属性中指定></!-->
+<form action="action_page.php">
+First name:<br/>
+<input type="text" name="firstname" value="Mickey">
+<br/>
+Last name:<br/>
+<input type="text" name="lastname" value="Mouse">
+<br/><br/>
+<input type="submit" value="Submit">
+</form> 
+
+<br/>
+
+
+
+
+
+
+
+
+<!--<select> 定义下拉列表></!-->
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected>Fiat</option>
+<option value="audi">Audi</option>
+</select>
+<!--<option> 定义待选择的选项。
+列表通常会把首个选项显示为被选选项></!-->
+<!--通过添加 selected 属性来定义预定义选项></!-->
+<br/>
+
+
+
+
+<!--<textarea> 定义多行输入字段(文本域)></!-->
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+
+<br/>
+
+
+
+
+
+<!--<button> 定义可点击的按钮></!-->
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+<br/>
+
+
+
+<!--HTML5 增加了如下表单元素：
+<datalist>
+<keygen>
+<output>></!-->
+
+<!--<datalist> 元素为 <input> 元素规定预定义选项列表></!-->
+<!--用户会在输入数据时看到预定义选项的下拉列表></!-->
+<!--<input> 元素的 list 属性必须引用 <datalist> 元素的 id 属性></!-->
+<!--通过 <datalist> 设置预定义值的 <input> 元素></!-->
+<form action="action_page.php">
+<input list="browsers">
+<datalist id="browsers">
+   <option value="Internet Explorer">
+   <option value="Firefox">
+   <option value="Chrome">
+   <option value="Opera">
+   <option value="Safari">
+</datalist> 
+</form>
+<!--Safari 或 IE9（以及更早的版本）不支持 datalist 标签></!-->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
