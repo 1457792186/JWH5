@@ -82,5 +82,153 @@ document.write \
 
 
 
+// JavaScript-确认（confirm 消息对话框）
+function rec(){
+    var mymessage=  confirm("你是女士?");;
+    if(mymessage==true)
+    {
+    	document.write("你是女士!");
+    }
+    else
+    {
+        document.write("你是男士!");
+    }
+  }  
+
+
+
+
+
+// JavaScript-警告（alert 消息对话框）
+function rec(){
+    var mychar="I love JavaScript";
+	alert(mychar);
+  }
+/*Html内调用对应
+<body>
+    <input name="button" type="button" onClick="rec()" value="点击我，弹出对话框" />
+</body>
+*/ 
+
+
+
+
+// JavaScript-提问（prompt 消息对话框）
+
+/*
+弹出消息对话框,通常用于询问一些需要与用户交互的信息。弹出消息对话框（包含一个确定按钮、取消按钮与一个文本输入框
+语法:
+
+prompt(str1, str2);
+参数说明：
+
+str1: 要显示在消息对话框中的文本，不可修改
+str2：文本框中的内容，可以修改
+返回值:
+
+1. 点击确定按钮，文本框中的内容将作为函数返回值
+2. 点击取消按钮，将返回null
+*/ 
+function rec(){
+	var score; //score变量，用来存储用户输入的成绩值。
+	score =  prompt("请输入你的成绩:");
+	if(score>=90)
+	{
+	   document.write("你很棒!");
+	}
+	else if(score>=75)
+    {
+	   document.write("不错吆!");
+	}
+	else if(score>=60)
+    {
+	   document.write("要加油!");
+    }
+    else
+	{
+       document.write("要努力了!");
+	}
+  }
+
+
+
+
+
+
+// JavaScript-打开新窗口（window.open）
+
+/*
+open() 方法可以查找一个已经存在或者新建的浏览器窗口。
+
+语法：
+
+window.open([URL], [窗口名称], [参数字符串])
+参数说明:
+
+URL：可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。
+窗口名称：可选参数，被打开窗口的名称。
+    1.该名称由字母、数字和下划线字符组成。
+    2."_top"、"_blank"、"_self"具有特殊意义的名称。
+       _blank：在新窗口显示目标网页
+       _self：在当前窗口显示目标网页
+       _top：框架网页中在上部窗口中显示目标网页
+    3.相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。
+   4.name 不能包含有空格。
+参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。
+
+参数说明：
+参数 		值			说明
+top 		number		窗口离屏幕顶部距离
+left		number		窗口离屏幕左边距离
+width		number		窗口宽度
+height		number		窗口高度
+menubar		yes,no		窗口有无菜单
+toolbar		yes,no		窗口有无工具条
+scrollbars 	yes,no		窗口有无滚动条
+status		yes,no		窗口有无状态栏
+*/ 
+
+// 打开http://www.imooc.com网页，将在新窗体中打开，宽为600，高为400，距屏顶100像素，屏左0像素。当点击按钮时，打开新窗口
+function Wopen(){
+      window.open('http://www.imooc.com','_blank','width=600,height=400,top=100,left=0,menubar=no,toolbar=no, status=no,scrollbars=yes')
+
+  } 
+
+
+
+
+
+// JavaScript-关闭窗口（window.close）
+/*
+close()关闭窗口
+
+用法：
+window.close();   //关闭本窗口
+或
+<窗口对象>.close();   //关闭指定的窗口
+*/ 
+
+function wClose(){
+      var mywin=window.open("http://www.imooc.com");
+ 		mywin.close();
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
