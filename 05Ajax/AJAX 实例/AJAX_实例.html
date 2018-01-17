@@ -1,0 +1,409 @@
+<!-- AJAX 实例 -->
+
+<!-- 本例演示与 XML 一起使用的 JavaScript (AJAX) -->
+
+
+
+
+<!-- 通过 XML HTTP 把文本文件载入 HTML 元素  -->
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for Firefox, Opera, IE7, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('T1').innerHTML=xmlhttp.responseText;
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">
+<div id="T1" style="border:1px solid black;height:40;width:300;padding:5"></div><br />
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp2.txt')">Click</button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- 通过 XML HTTP 加载 XML 文件  -->
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Opera, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('A1').innerHTML=xmlhttp.status;
+    document.getElementById('A2').innerHTML=xmlhttp.statusText;
+    document.getElementById('A3').innerHTML=xmlhttp.responseText;
+    }
+  else
+    {
+    alert("Problem retrieving XML data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<h2>Using the HttpRequest Object</h2>
+
+<p><b>Status:</b>
+<span id="A1"></span>
+</p>
+
+<p><b>Status text:</b>
+<span id="A2"></span>
+</p>
+
+<p><b>Response:</b>
+<br /><span id="A3"></span>
+</p>
+
+<button onclick="loadXMLDoc('/example/xmle/note.xml')">Get XML</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 通过 XML HTTP 进行一次 HEAD 请求  -->
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for Firefox, Mozilla, IE7, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('p1').innerHTML=xmlhttp.getAllResponseHeaders();
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<p id="p1">
+The getAllResponseHeaders() function returns the headers of a resource.
+The headers contain file information like length,
+server-type, content-type, date-modified, etc.</p>
+
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">Get Headers</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- 通过 XML HTTP 进行一次指定的 HEAD 请求  -->
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// all modern browsers
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('p1').innerHTML="This file was last modified on: " + xmlhttp.getResponseHeader('Last-Modified');
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<p id="p1">
+The getResponseHeader() function returns a header from a resource.
+Headers contain file information like length,
+server-type, content-type, date-modified, etc.</p>
+
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">Get "Last-Modified"</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 把 XML 文件显示为 HTML 表格 -->
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Mozilla, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=onResponse;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function onResponse()
+{
+if(xmlhttp.readyState!=4) return;
+if(xmlhttp.status!=200)
+  {
+  alert("Problem retrieving XML data");
+  return;
+  }
+
+txt="<table border='1'>";
+x=xmlhttp.responseXML.documentElement.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  {
+  txt=txt + "<tr>";
+  xx=x[i].getElementsByTagName("TITLE");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  xx=x[i].getElementsByTagName("ARTIST");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  txt=txt + "</tr>";
+  }
+txt=txt + "</table>";
+document.getElementById('copy').innerHTML=txt;
+}
+
+</script>
+</head>
+
+<body>
+<div id="copy">
+<button onclick="loadXMLDoc('/example/xmle/cd_catalog.xml')">Get CD info</button>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 当用户在文本框中键入内容时，使用 XMLHttp： -->
+<!-- 当用户键入文本时，通过使用 XML HTTP 与服务器进行在线通信 -->
+<html>
+<head>
+<script type="text/javascript">
+
+var xmlHttp=null;
+
+function showHint(str)
+{
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+try
+  {// Firefox, Opera 8.0+, Safari, IE7
+  xmlHttp=new XMLHttpRequest();
+  }
+catch(e)
+  {// Old IE
+  try
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  catch(e)
+    {
+    alert ("Your browser does not support XMLHTTP!");
+    return;  
+    }
+  }
+var url="/ajax/gethint.asp?q=" + str;
+url=url+"&sid="+Math.random();
+xmlHttp.open("GET",url,false);
+xmlHttp.send(null);
+document.getElementById("txtHint").innerHTML=xmlHttp.responseText;
+}
+</script> 
+</head>
+<body><form> 
+First Name:
+<input type="text" id="txt1"
+onkeyup="showHint(this.value)">
+</form><p>Suggestions: <span id="txtHint"></span></p> </body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<!-- 
+AJAX
+AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。
+AJAX 不是新的编程语言，而是一种使用现有标准的新方法。
+AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下 
+-->
+
+
+<!-- 
+AJAX 简介
+AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
+
+应当具备的基础知识
+在继续学习之前，需要对下面的知识有基本的了解：
+HTML / XHTML
+CSS
+JavaScript / DOM
+
+
+
+什么是 AJAX ？
+AJAX = 异步 JavaScript 和 XML。
+AJAX 是一种用于创建快速动态网页的技术。
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。
+有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。
+Google Suggest
+在 2005 年，Google 通过其 Google Suggest 使 AJAX 变得流行起来。
+Google Suggest 使用 AJAX 创造出动态性极强的 web 界面：当您在谷歌的搜索框输入关键字时，JavaScript 会把这些字符发送到服务器，然后服务器会返回一个搜索建议的列表。
+ -->
+
+
+
+<!-- 一个小型的 AJAX 应用程序 -->
+<!-- AJAX 实例解释
+上面的 AJAX 应用程序包含一个 div 和一个按钮。
+div 部分用于显示来自服务器的信息。当按钮被点击时，它负责调用名为 loadXMLDoc() 的函数： -->
+<html>
+<body>
+
+<div id="myDiv"><h3>Let AJAX change this text</h3></div>
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+
+</body>
+</html>
+<!-- 接下来，在页面的 head 部分添加一个 <script> 标签。该标签中包含了这个 loadXMLDoc() 函数： -->
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+.... AJAX script goes here ...
+}
+</script>
+</head>
+
+
